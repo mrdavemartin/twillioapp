@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="<%=screening_connect_path(format: :xml)%>">
+        <Say>Press any key to accept a call for Pocket Recruit <%=@call_option.blank? ? "" : @call_option[:name] %>. Hang up now to decline the call.</Say>
+    </Gather>
+    <Hangup/>
+</Response>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial action="<%= welcome_options_path(format: :xml) %>?id=<%=(@attempt+1).to_s%>&amp;menu_digits=<%=@digits.to_i%>" timeout="<%=@contact[:timeout]%>" timeLimit="1800">
+		<Number url="<%=sceening_screen_path(format: :xml)%>?menu_digits=<%=@digits.to_i%>">
+			<%=@contact[:mobile]%>
+		</Number>
+	</Dial>
+    <Say>The call failed or the remote party hung up. Goodbye.</Say>
+</Response>

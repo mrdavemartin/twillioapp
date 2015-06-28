@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Sms to="+447753775312" from="+442033229948"><%=@call_options.blank? ? "" : @call_options[:name] %> voice messsage <%=params[:RecordingUrl]%> </Sms>
+	<Say>Thank you, we will be in touch soon. Goodbye.</Say>
+	
+    <Hangup/>
+</Response>
